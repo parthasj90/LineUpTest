@@ -2,8 +2,11 @@ import requests
  
 from flask import Flask, Response, jsonify, request
 from marshmallow import Schema, fields
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 class UserDataSchema(Schema):
     avatar = fields.Str()
