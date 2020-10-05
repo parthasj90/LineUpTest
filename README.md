@@ -18,7 +18,7 @@ Backend :
 - Currently as there is only one type of api , the app has one folder user.
 - Each folder will contain api.py and schema.py files which contain the routes and schema respectively
 - Requirements.txt and Dockerfile are for containerization purposes.
-- To run only the backend app: python app.py
+- To run only the backend app: move to the backend folder and python app.py
 
 Frontend:
 
@@ -33,3 +33,4 @@ Frontend:
 - App.css can be used to override global css if neededd.
 - package.json is used to manage the dependencies and scripts.
 - Dockerfile is used for containerization purposes.
+- To run only the frontend app: move to the frontend folder and npm start
