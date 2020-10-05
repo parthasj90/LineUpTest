@@ -2,8 +2,13 @@ from flask import Blueprint
 import requests
 from .userschema import UserDataSchema
 
+# create a user blue print
 user_bp = Blueprint("api", __name__)
+
+# create a user schema object
 UserSchema = UserDataSchema()
+
+# api route to ingest the reqres api
 
 
 @user_bp.route("/api/<int:id>", methods=['GET'])
