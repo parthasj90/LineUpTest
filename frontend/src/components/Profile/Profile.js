@@ -9,15 +9,18 @@ const Card = styled.div`
   transition: 0.3s;
   text-align: center;
   padding: 20px;
+  width: 300px;
+  margin: 0 auto;
 `;
-const Container = styled.div`
+
+const TextContainer = styled.div`
   padding: 2px 16px;
 `;
-class Profile extends Component {
-  constructor(props) {
-    super(props);
-  }
 
+const Image = styled.img`
+  width: 100%;
+`;
+class Profile extends Component {
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.id);
   }
@@ -28,20 +31,20 @@ class Profile extends Component {
       <div>
         {user ? (
           <Card>
-            <img src={user.avatar}></img>
+            <Image src={user.avatar}></Image>
             <br />
-            <Container>
+            <TextContainer>
               {`User Id : ${user.id}`}
               <br />
               {`Name: ${user.firstName} ${user.lastName}`}
               <br />
               {`Email : ${user.email}`}
-            </Container>
+            </TextContainer>
 
             <br />
           </Card>
         ) : (
-          ""
+          "No data found for the user"
         )}
       </div>
     );

@@ -1,25 +1,16 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Profile from "./components/Profile/Profile"
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
     <div className="App">
-       <Router>
+      <Router>
         <Switch>
           <Route path="/users/:id" component={Profile} />
-          <Route path="/">
-            <div>
-              Welcome
-            </div>
-          </Route>
+          <Route>Ooops..page is not available right now.</Route>
         </Switch>
-    </Router>
+      </Router>
     </div>
   );
 }
